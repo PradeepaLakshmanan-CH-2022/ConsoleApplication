@@ -1,7 +1,7 @@
 version: 0.0
 os: windows
 files:
-  - source: C:\MyConsoleapp\ConsoleApplication\ConsolePipeline
+  - source: /
     destination: C:\ConsoleApp
 
 hooks:
