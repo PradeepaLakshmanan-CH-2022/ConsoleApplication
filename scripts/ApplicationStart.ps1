@@ -1,8 +1,13 @@
 # Stop the console application if it's already running
+# Set the application path
+
 Get-Process -Name "ConsolePipeline" -ErrorAction SilentlyContinue | Stop-Process -Force
 
 # Specify the path to your console application executable
-$consoleAppPath = "C:\ConsolepipelineDeploy\ConsolePipeline"
+$consoleAppPath = ""C:\PipelineDeployment\ApiPipelineDeploy\PipelineTesting"
+# Clean the application directory
+Remove-Item -Path $consoleAppPath\* -Recurse -Force
+dotnet publish -c Release -o $consoleAppPath
 
 # Specify the path for the output file
 $outputFilePath = "C:\Outputfile\Output.txt"
