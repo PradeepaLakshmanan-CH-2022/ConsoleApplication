@@ -2,7 +2,7 @@
 Get-Process -Name "ConsolePipeline" -ErrorAction SilentlyContinue | Stop-Process -Force
 
 # Specify the path to your console application executable
-$consoleAppPath = "C:\ConsoleApp\ConsolePipeline.dll"
+$consoleAppPath = "C:\ConsoleApp\ConsolePipeline"
 
 # Specify the path for the output file
 $outputFilePath = "C:\Outputfile\Output.txt"
