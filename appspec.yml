@@ -5,11 +5,6 @@ files:
     destination: C:\ConsoleApp
 
 hooks:
-  BeforeInstall:
-    - location: scripts\BeforeInstall.ps1
-      timeout: 300
-      runas: Administrator
-
   ApplicationStart:
     - location: scripts\ApplicationStart.ps1
       timeout: 300
