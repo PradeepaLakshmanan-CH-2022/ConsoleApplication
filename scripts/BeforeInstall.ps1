@@ -7,8 +7,8 @@ Remove-Item -Path "C:\Path\To\Output\Output.txt" -ErrorAction SilentlyContinue
 # Install .NET runtime
 $dotnetInstallerUrl = "https://download.visualstudio.microsoft.com/download/pr/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/dxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/dotnet-runtime-6.0.x-windows-x64.exe"
 
-$dotnetInstallerPath = "C:\Path\To\Installer\dotnet-runtime-6.0.x-windows-x64.exe"
-$dotnetInstallLogPath = "C:\Path\To\Logs\dotnet-install.log"
+$dotnetInstallerPath = "C:\DotnetApp\dotnet-runtime-6.0.x-windows-x64.exe"
+$dotnetInstallLogPath = "C:\DotnetApp\dotnet-install.log"
 
 Invoke-WebRequest -Uri $dotnetInstallerUrl -OutFile $dotnetInstallerPath
 Start-Process -FilePath $dotnetInstallerPath -ArgumentList "/quiet /log $dotnetInstallLogPath" -Wait
