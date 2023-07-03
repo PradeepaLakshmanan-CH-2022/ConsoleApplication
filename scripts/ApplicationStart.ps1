@@ -1,5 +1,16 @@
-# Start the console application and store the output in a text document
-$consoleAppPath = "C:\ConsolepipelineDeploy\ConsolePipeline.exe"
-$outputPath = "C:\Output\Output.txt"
+# Stop the console application if it's already running
+Get-Process -Name "ConsolePipeline" -ErrorAction SilentlyContinue | Stop-Process -Force
 
-Start-Process -FilePath $consoleAppPath -NoNewWindow -RedirectStandardOutput $outputPath -WorkingDirectory (Split-Path $consoleAppPath)
+# Specify the path to your console application executable
+$consoleAppPath = "C:\ConsolepipelineDeploy\ConsolePipeline.exe"
+
+# Specify the path for the output file
+$outputFilePath = "C:\Outputfile\Output.txt"
+
+# Run the console application and redirect the output to a file
+Start-Process -FilePath $consoleAppPath -NoNewWindow -RedirectStandardOutput $outputFilePath -Wait
+
+# Read the output file and display its contents
+$outputContent = Get-Content -Path $outputFilePath -Raw
+Write-Host "Console application output:"
+Write-Host $outputContent
