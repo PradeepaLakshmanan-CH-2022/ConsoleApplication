@@ -1,3 +1,2 @@
-# Install IIS
-Import-Module ServerManager
-Install-WindowsFeature -Name Web-Server
+Import-Module -Name ServerManager
+Install-WindowsFeature Web-Server
