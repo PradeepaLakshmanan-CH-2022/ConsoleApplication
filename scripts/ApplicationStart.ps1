@@ -4,7 +4,7 @@
 Get-Process -Name "ConsolePipeline" -ErrorAction SilentlyContinue | Stop-Process -Force
 
 # Specify the path to your console application executable
-$consoleAppPath = "C:\MyConsoleapp\ConsoleApplication\ConsolePipeline"
+$consoleAppPath = "C:\inetpub\wwwroot\ConsolePipeline"
 # Clean the application directory
 Remove-Item -Path $consoleAppPath\* -Recurse -Force
 dotnet publish -c Release -o $consoleAppPath

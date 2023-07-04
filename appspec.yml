@@ -2,7 +2,7 @@ version: 0.0
 os: windows
 files:
   -  source: ConsolePipeline/
-   destination: C:\MyCicdApplication
+   destination: C:\inetpub\wwwroot
 
 hooks:
   ApplicationStart:
